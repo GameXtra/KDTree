@@ -1,0 +1,12 @@
+/home/ido/Desktop/clion-2017.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/ido/KDTree
+-- Build type: Debug
+-- USING CXXFLAGS = '-g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -frounding-math -g'
+-- USING EXEFLAGS = ' -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,--as-needed '
+-- Targetting Unix Makefiles
+-- Using /usr/bin/c++ compiler.
+-- Requested component: MPFR
+-- Requested component: GMP
+-- Boost version: 1.54.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ido/KDTree/cmake-build-debug
