@@ -1,3 +1,2 @@
-/home/ido/KDTree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ido/KDTree/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ido/KDTree/cmake-build-debug/CMakeFiles/executable.dir
+/cygdrive/c/Users/t-idkess/Documents/KDTree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/t-idkess/Documents/KDTree/cmake-build-debug/CMakeFiles/edit_cache.dir

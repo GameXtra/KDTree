@@ -23,6 +23,9 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -48,17 +51,17 @@ RM = /cygdrive/c/Users/t-idkess/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/t-idkess/Documents/KDTree
+CMAKE_SOURCE_DIR = /cygdrive/c/Users/t-idkess/Documents/KDTree/CMakeFiles/CMakeTmp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/t-idkess/Documents/KDTree/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/c/Users/t-idkess/Documents/KDTree/CMakeFiles/CMakeTmp
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	@echo "Running CMake to regenerate build system..."
 	/cygdrive/c/Users/t-idkess/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
@@ -69,7 +72,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	@echo "No interactive CMake dialog available..."
 	/cygdrive/c/Users/t-idkess/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
@@ -80,9 +83,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/t-idkess/Documents/KDTree/cmake-build-debug/CMakeFiles /cygdrive/c/Users/t-idkess/Documents/KDTree/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/t-idkess/Documents/KDTree/CMakeFiles/CMakeTmp/CMakeFiles /cygdrive/c/Users/t-idkess/Documents/KDTree/CMakeFiles/CMakeTmp/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/t-idkess/Documents/KDTree/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/t-idkess/Documents/KDTree/CMakeFiles/CMakeTmp/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,6 +113,46 @@ depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named cmTC_cda87
+
+# Build rule for target.
+cmTC_cda87: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cmTC_cda87
+.PHONY : cmTC_cda87
+
+# fast build rule for target.
+cmTC_cda87/fast:
+	$(MAKE) -f CMakeFiles/cmTC_cda87.dir/build.make CMakeFiles/cmTC_cda87.dir/build
+.PHONY : cmTC_cda87/fast
+
+feature_tests.o: feature_tests.c.o
+
+.PHONY : feature_tests.o
+
+# target to build an object file
+feature_tests.c.o:
+	$(MAKE) -f CMakeFiles/cmTC_cda87.dir/build.make CMakeFiles/cmTC_cda87.dir/feature_tests.c.o
+.PHONY : feature_tests.c.o
+
+feature_tests.i: feature_tests.c.i
+
+.PHONY : feature_tests.i
+
+# target to preprocess a source file
+feature_tests.c.i:
+	$(MAKE) -f CMakeFiles/cmTC_cda87.dir/build.make CMakeFiles/cmTC_cda87.dir/feature_tests.c.i
+.PHONY : feature_tests.c.i
+
+feature_tests.s: feature_tests.c.s
+
+.PHONY : feature_tests.s
+
+# target to generate assembly for a file
+feature_tests.c.s:
+	$(MAKE) -f CMakeFiles/cmTC_cda87.dir/build.make CMakeFiles/cmTC_cda87.dir/feature_tests.c.s
+.PHONY : feature_tests.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -118,6 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... cmTC_cda87"
+	@echo "... feature_tests.o"
+	@echo "... feature_tests.i"
+	@echo "... feature_tests.s"
 .PHONY : help
 
 
