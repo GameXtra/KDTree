@@ -39,8 +39,8 @@ void generate_statistics() {
     const size_t min_k = 1;
     const size_t k_scaling = 2;
 
-    const int number_of_builds = 1;
-    const int number_of_runs_per_k = 1;
+    const int number_of_builds = 10;
+    const int number_of_runs_per_k = 10;
 
     boost::timer timer;
 
