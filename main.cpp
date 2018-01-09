@@ -29,11 +29,11 @@ Point_d random_point(size_t d) {
 }
 
 void generate_statistics() {
-    const size_t max_d = 20;
-    const size_t min_d = 1;
+    const size_t max_d = 10;
+    const size_t min_d = 10;
 
-    const size_t min_size = 10;
-    const size_t max_size = 10000;
+    const size_t min_size = 100000;
+    const size_t max_size = 100000;
     const size_t size_scaling = 10;
 
     const size_t min_k = 1;
