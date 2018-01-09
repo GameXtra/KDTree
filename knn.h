@@ -1,3 +1,7 @@
+#include "knnNode.h"
+#include "knnRepository.h"
+
+using namespace MyKnn;
 using namespace std;
 
 template<typename Kernel>
@@ -13,8 +17,8 @@ public:
         for (int i = 1; beginPoints != endPoints; ++beginPoints, ++i)
             this->points.push_back(*beginPoints);
         Point_d ***points_index_by_axis = sort_by_each_axis(d);
-        this->root = unique_ptr<KnnNode>(
-                new KnnNode(points_index_by_axis, points.size(), 0, d));
+        this->root = unique_ptr<KnnNode<Kernel>>(
+                new KnnNode<Kernel>(points_index_by_axis, points.size(), 0, d));
         for (int i = 0; i < d; ++i)
             delete[] points_index_by_axis[i];
         delete[] points_index_by_axis;
@@ -25,23 +29,19 @@ public:
     //output:  a vector of the indexes of the k-nearest-neighbors points todo : indexes or point_d??
     template<typename OutputIterator>
     OutputIterator find_points(size_t k, const Point_d &it, OutputIterator oi) {
-        KNearestPointRepository knnRepository(*root, it, k, d);
+        KnnRepository<Kernel> knnRepository(*root, it, k, d);
         for (auto point: knnRepository.get_results())
             oi++ = *point;
         return oi;
     }
 
 private:
-
-
-    typedef typename Knn<Kernel>::KnnNode KnnNode;
-
-    unique_ptr <KnnNode> root;
+    unique_ptr <KnnNode<Kernel>> root;
     vector <Point_d> points;
     size_t d;
 
     Point_d ***sort_by_each_axis(size_t d) {
-        Point_d ***res = new Point_d **[d];
+        auto ***res = new Point_d **[d];
         for (auto i = 0; i < d; ++i) {
             res[i] = new Point_d *[points.size()];
             for (auto j = 0; j < points.size(); ++j)

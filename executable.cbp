@@ -90,6 +90,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/ido/KDTree/constants.h">
+			<Option target="executable"/>
+		</Unit>
+		<Unit filename="/home/ido/KDTree/knn.h">
+			<Option target="executable"/>
+		</Unit>
+		<Unit filename="/home/ido/KDTree/knnNode.h">
+			<Option target="executable"/>
+		</Unit>
+		<Unit filename="/home/ido/KDTree/knnRepository.h">
+			<Option target="executable"/>
+		</Unit>
 		<Unit filename="/home/ido/KDTree/main.cpp">
 			<Option target="executable"/>
 		</Unit>

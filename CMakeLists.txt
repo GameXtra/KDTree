@@ -56,7 +56,7 @@ endif()
 # Creating entries for target: executable
 # ############################
 
-add_executable( executable  main.cpp knnNode.h constants.h knnRepository.h)
+add_executable( executable  main.cpp knn.h knnNode.h constants.h knnRepository.h)
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS executable )
 
