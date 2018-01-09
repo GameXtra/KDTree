@@ -5,7 +5,13 @@
 #ifndef EXECUTABLE_KNNNODE_H
 #define EXECUTABLE_KNNNODE_H
 
+#include <memory>
+#include <set>
+#include <vector>
+#include <cstring>
 #include "constants.h"
+
+using namespace std;
 
 namespace MyKnn {
     template<typename Kernel>
@@ -37,7 +43,7 @@ namespace MyKnn {
 
         // todo make this faster by caching the last result.
         Point_d get_closest_point_possible(const Point_d &point) const {
-            vector <FT> point_to_be;
+            vector<FT> point_to_be;
             for (int i = 0; i < d; i++) {
                 if (min_point[i] > point[i]) {
                     point_to_be.push_back(min_point[i]);
@@ -68,14 +74,14 @@ namespace MyKnn {
 
     private:
         vector<const Point_d *> points;
-        unique_ptr <KnnNode> left, right;
+        unique_ptr<KnnNode> left, right;
         Point_d min_point;
         Point_d max_point;
         const size_t d;
 
         void update_min_max(Point_d ***points_ordered_by_axis, size_t number_of_points) {
-            vector <FT> point_to_be_min;
-            vector <FT> point_to_be_max;
+            vector<FT> point_to_be_min;
+            vector<FT> point_to_be_max;
             for (int i = 0; i < d; ++i) {
                 point_to_be_min.push_back((*(points_ordered_by_axis[i][0]))[i]);
                 point_to_be_max.push_back((*(points_ordered_by_axis[i][number_of_points - 1]))[i]);
@@ -86,14 +92,14 @@ namespace MyKnn {
 
         void create_splited_sorted_by_axis_array(Point_d ***origin, Point_d ****pleft, Point_d ****pright, size_t n,
                                                  size_t index_to_sort_by) {
-            Point_d **temp = new Point_d *[n];
+            auto **temp = new Point_d *[n];
             size_t m = n / 2;
-            set < Point_d*> leftSet;
+            set<Point_d *> leftSet;
             for (int i = 0; i < m; ++i)
                 leftSet.insert(origin[index_to_sort_by][i]);
             (*pleft) = new Point_d **[d], (*pright) = new Point_d **[d];
             for (int i = 0; i < d; ++i) {
-                int left_index = 0, right_index = m;
+                int left_index = 0, right_index = (int) m;
                 for (int j = 0; j < n; ++j) {
                     if (leftSet.find(origin[i][j]) != leftSet.end()) {
                         temp[left_index++] = origin[i][j];
