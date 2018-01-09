@@ -1,12 +1,12 @@
-#include <fstream>
-#include <sstream>
-#include <ostream>
-#include <set>
-#include <boost/lexical_cast.hpp>
-#include <boost/timer.hpp>
-#include <CGAL/Cartesian_d.h>
-#include <CGAL/Gmpq.h>
-#include <CGAL/Kernel_d/Point_d.h>
+//#include <fstream>
+//#include <sstream>
+//#include <ostream>
+//#include <set>
+//#include <boost/lexical_cast.hpp>
+//#include <boost/timer.hpp>
+//#include <CGAL/Cartesian_d.h>
+//#include <CGAL/Gmpq.h>
+//#include <CGAL/Kernel_d/Point_d.h>
 
 #include "knn.h"
 
