@@ -1,1 +1,0 @@
-/usr/bin/cc    -Wl,--enable-auto-import  CMakeFiles/cmTC_cda87.dir/feature_tests.c.o  -o cmTC_cda87.exe -Wl,--out-implib,libcmTC_cda87.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

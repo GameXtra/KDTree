@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ido/KDTree/knn.h
+vector
+-
+queue
+-
+
+/home/ido/KDTree/main.cpp
+fstream
+-
+sstream
+-
+ostream
+-
+set
+-
+boost/lexical_cast.hpp
+-
+boost/timer.hpp
+-
+CGAL/Cartesian_d.h
+-
+CGAL/Gmpq.h
+-
+CGAL/Kernel_d/Point_d.h
+-
+knn.h
+/home/ido/KDTree/knn.h
+
